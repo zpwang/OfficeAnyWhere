@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg_image" >
+
+    <ImageView
+        android:id="@+id/login_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/login_log" />
+
+    <EditText
+        android:id="@+id/login_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_log"
+        android:layout_alignRight="@+id/login_log"
+        android:layout_below="@+id/login_log"
+        android:layout_marginTop="30dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/login_user_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_user_name"
+        android:layout_alignRight="@+id/login_user_name"
+        android:layout_below="@+id/login_user_name"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_user_pwd"
+        android:layout_alignRight="@+id/login_user_pwd"
+        android:layout_below="@+id/login_user_pwd"
+        android:text="@string/login_button_name" />
+
+    <CheckBox
+        android:id="@+id/remember_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_button"
+        android:layout_below="@+id/login_button"
+        android:text="@string/remember_me" />
+
+</RelativeLayout>

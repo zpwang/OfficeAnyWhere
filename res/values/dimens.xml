@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+	<dimen name="navigate_left">100dp</dimen>
+	<dimen name="navigate_bottom">40dp</dimen>
+	<dimen name="navigate_top">35dp</dimen>
+</resources>
