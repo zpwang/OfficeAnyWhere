@@ -10,6 +10,7 @@ public class GithubTest {
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("≤‚ ‘github");
+		System.out.println("test");
 	}
 	
 }
