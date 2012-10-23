@@ -13,7 +13,6 @@ public class Calander {
 	private static int[][] calendar = new int[6][7];
 	private static int[] monthDay = new int[]{31,28,31,30,31,30,31,31,30,31,30,31};
 	public static void main(String[] args) throws ParseException {
-		
 		for(int i=0;i<10;i++){
 			for(int j = 0 ;j<10;j++){
 				System.out.println(i+"-------"+j);
