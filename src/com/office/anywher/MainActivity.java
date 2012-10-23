@@ -9,8 +9,8 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,11 +30,13 @@ import android.widget.TextView;
 import com.office.anywher.address.AddressActivity;
 import com.office.anywher.datas.DatasActivity;
 import com.office.anywher.email.EmailActivity;
+import com.office.anywher.email.EmailUtil;
 import com.office.anywher.global.GlobalVar;
 import com.office.anywher.infopub.InfoPubActivity;
 import com.office.anywher.meeting.MeetingActivity;
 import com.office.anywher.offcial.ActionTankenActivity;
 import com.office.anywher.sehedule.ScheduleActivity;
+import com.office.anywher.sehedule.ScheduleInfo;
 import com.office.anywher.utils.ActivityStackUtil;
 import com.office.anywher.views.SelfGridView;
 
@@ -43,6 +45,7 @@ public class MainActivity extends Activity {
 	private static final String tag = "MainActivity";
 	protected static final String aGridViewItemImage = "ItemImage";
 	protected static final String aGridViewItemText = "ItemText";
+	protected static final String aGridViewItemNumber = "ItemNewNumber";
 	protected SimpleAdapter adapter;
     private ImageView aMenuButton;
     private ScrollView aLeftNaviget;
@@ -70,8 +73,8 @@ public class MainActivity extends Activity {
         initLeftMenuDatas();
 		adapter = new SimpleAdapter(this, aMenuDatas,
 				R.layout.nine_dial_gv_item, new String[] {aGridViewItemImage,
-						aGridViewItemText }, new int[] { R.id.gv_item_image,
-						R.id.gv_item_text });
+						aGridViewItemText,aGridViewItemNumber }, new int[] { R.id.gv_item_image,
+						R.id.gv_item_text,R.id.gv_item_new_number });
 		SimpleAdapter leftAdapter = new SimpleAdapter(this, aLeftMenuDatas,
 				R.layout.nine_dial_gv_item, new String[] {aGridViewItemImage,
 						aGridViewItemText }, new int[] { R.id.gv_item_image,
@@ -117,7 +120,6 @@ public class MainActivity extends Activity {
 			}
         });
     }
-	
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
@@ -144,16 +146,18 @@ public class MainActivity extends Activity {
 		HashMap<String,Object> map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_gongwenchuli);
 		map.put(aGridViewItemText,"");
+		map.put(aGridViewItemNumber, "2");
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_youxiangguanli);
 		map.put(aGridViewItemText,"");
+		map.put(aGridViewItemNumber,EmailUtil.getEmailNumber(1));
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_richenganpai);
-		map.put(aGridViewItemText,"");
+		map.put(aGridViewItemNumber,((List<ScheduleInfo>)GlobalVar.getInstance().get(IConst.SCHEDUL_DEMO_DATA)).size());
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();

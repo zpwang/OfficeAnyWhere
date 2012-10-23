@@ -72,12 +72,12 @@ public final class R {
         public static final int center_content=0x7f0a0006;
         public static final int center_scroll=0x7f0a0008;
         public static final int center_scroll_content=0x7f0a0009;
-        public static final int change_user=0x7f0a0099;
-        public static final int content=0x7f0a0097;
-        public static final int content_txt=0x7f0a0098;
+        public static final int change_user=0x7f0a009a;
+        public static final int content=0x7f0a0098;
+        public static final int content_txt=0x7f0a0099;
         public static final int date_select=0x7f0a0012;
-        public static final int end_time=0x7f0a0095;
-        public static final int end_time_txt=0x7f0a0096;
+        public static final int end_time=0x7f0a0096;
+        public static final int end_time_txt=0x7f0a0097;
         public static final int first=0x7f0a0017;
         public static final int first_month_1=0x7f0a0021;
         public static final int first_month_2=0x7f0a0022;
@@ -125,6 +125,7 @@ public final class R {
         public static final int four_title_7=0x7f0a005f;
         public static final int grid_view_left_nv=0x7f0a0005;
         public static final int gv_item_image=0x7f0a008f;
+        public static final int gv_item_new_number=0x7f0a0091;
         public static final int gv_item_text=0x7f0a0090;
         public static final int head_arrowImageView=0x7f0a0083;
         public static final int head_contentLayout=0x7f0a0082;
@@ -180,8 +181,8 @@ public final class R {
         public static final int six_title_7=0x7f0a007f;
         public static final int split=0x7f0a001e;
         public static final int split_1=0x7f0a001f;
-        public static final int start_time=0x7f0a0093;
-        public static final int start_time_txt=0x7f0a0094;
+        public static final int start_time=0x7f0a0094;
+        public static final int start_time_txt=0x7f0a0095;
         public static final int tableRow1=0x7f0a0016;
         public static final int tableRow2=0x7f0a0020;
         public static final int tableRow3=0x7f0a0030;
@@ -210,8 +211,8 @@ public final class R {
         public static final int third_title_5=0x7f0a004d;
         public static final int third_title_6=0x7f0a004e;
         public static final int third_title_7=0x7f0a004f;
-        public static final int title=0x7f0a0091;
-        public static final int title_txt=0x7f0a0092;
+        public static final int title=0x7f0a0092;
+        public static final int title_txt=0x7f0a0093;
         public static final int welcome_text=0x7f0a0003;
     }
     public static final class layout {

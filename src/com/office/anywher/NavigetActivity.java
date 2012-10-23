@@ -1,13 +1,18 @@
 package com.office.anywher;
 
+import java.util.List;
+
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
+import android.widget.SimpleAdapter;
 
+import com.office.anywher.global.GlobalVar;
 import com.office.anywher.utils.ActivityStackUtil;
 import com.office.anywher.views.SelfGridView;
 
@@ -23,11 +28,21 @@ public class NavigetActivity extends MainActivity{
         aCenterLayout.removeAllViews();
         aInflater=LayoutInflater.from(this);
         aGridView = (SelfGridView)aInflater.inflate(R.layout.grid_view, null);        
-        aGridView.setAdapter(adapter);
 		aGridView.setOnItemClickListener(ItemOnClick);
 		aCenterLayout.addView(aGridView);
 	}
-	
+	@Override
+	public void onResume(){
+		super.onResume();
+		((List)GlobalVar.getInstance().get(IConst.EMAIL_DEMO_DATA)).remove(0);
+		Log.d(tag, "size:"+((List)GlobalVar.getInstance().get(IConst.EMAIL_DEMO_DATA)).size());
+		initMenuDatas();
+		adapter = new SimpleAdapter(this, aMenuDatas,
+				R.layout.nine_dial_gv_item, new String[] {aGridViewItemImage,
+						aGridViewItemText,aGridViewItemNumber }, new int[] { R.id.gv_item_image,
+						R.id.gv_item_text,R.id.gv_item_new_number });
+        aGridView.setAdapter(adapter);
+	}
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		switch (keyCode) {
 		case KeyEvent.KEYCODE_BACK:

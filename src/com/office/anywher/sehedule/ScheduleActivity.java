@@ -27,10 +27,11 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.office.anywher.IConst;
 import com.office.anywher.MainActivity;
 import com.office.anywher.R;
+import com.office.anywher.global.GlobalVar;
 import com.office.anywher.https.DataType;
-import com.office.anywher.utils.ActivityStackUtil;
 import com.office.anywher.utils.DefaultProgress;
 /**
  * 协同办公
@@ -475,36 +476,7 @@ public class ScheduleActivity extends MainActivity {
 	 * @throws ParseException 
 	 */
 	private void getDatas() throws ParseException{
-		String from = "2012-10-10 17:01:01";
-		String to = "2012-10-20 22:01:01";
-		ScheduleInfo aSchedule = new ScheduleInfo();
-		aSchedule.mScheduleTitle = "我的日程测试数据";
-		aSchedule.mScheduleDetails = "我的日程测试数据我的日程测试数据我的日程测试数据我的日程测试数据我的日程测试数据我的日程测试数据";
-		Calendar c = Calendar.getInstance();
-		c.setTime(sdfMore.parse(from));
-		aSchedule.mFrom = sdfMore
-				.parse(c.get(Calendar.YEAR)
-						+ "-"
-						+ ((c.get(Calendar.MONTH) + 1) >= 10 ? c
-								.get(Calendar.MONTH) + 1 : "0"
-								+ (c.get(Calendar.MONTH) + 1))
-						+ "-"
-						+ (c.get(Calendar.DATE) >= 10 ? c.get(Calendar.DATE)
-								: "0" + c.get(Calendar.DATE))+" "+"00:01:01");
-		c.setTime(sdfMore.parse(to));
-		aSchedule.mTo = sdfMore
-				.parse(c.get(Calendar.YEAR)
-						+ "-"
-						+ ((c.get(Calendar.MONTH) + 1) >= 10 ? c
-								.get(Calendar.MONTH) + 1 : "0"
-								+ (c.get(Calendar.MONTH) + 1))
-						+ "-"
-						+ (c.get(Calendar.DATE) >= 10 ? c.get(Calendar.DATE)
-								: "0" + c.get(Calendar.DATE))+" "+"23:59:59");;
-				
-	  mScheduleInfoList.add(aSchedule);
-	  mScheduleInfoList.add(aSchedule);
-
+		mScheduleInfoList = ((List<ScheduleInfo>)GlobalVar.getInstance().get(IConst.SCHEDUL_DEMO_DATA));
 	}
 
 	class TextViewState{

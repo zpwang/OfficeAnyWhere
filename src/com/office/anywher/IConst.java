@@ -5,6 +5,9 @@ public interface IConst {
 	public static final String USER_CHANGE = "USER_CHANGE";
 	public static final String LOGIN_USER_NAME = "LOGIN_USER_NAME";
 	public static final String WELL_COME = "ºÍ³ÏÒÆ¶¯OA»¶Ó­Äú";
+	public static final String EMAIL_DEMO_DATA = "EMAIL_DEMO_DATA";
+	public static final String SCHEDUL_DEMO_DATA = "SCHEDUL_DEMO_DATA";
+
 	public interface NavigetText{
 		public static final String[] CLICKTEXTCOLOR = new String[]{"#331A00","#FFFFFF"};
 		public static final int[] CLICKTEXTSIZE = new int[]{15,15};
