@@ -5,8 +5,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,13 +21,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.office.anywher.MainActivity;
 import com.office.anywher.R;
 import com.office.anywher.https.DataType;
+import com.office.anywher.utils.ActivityStackUtil;
 import com.office.anywher.utils.DefaultProgress;
 /**
  * 协同办公
@@ -127,10 +134,47 @@ public class ScheduleActivity extends MainActivity {
 	    		}
 	    	}
 			if(aTextViewState[select_i][select_j].mClickCount >= 2){
-				Toast.makeText(ScheduleActivity.this,"创建新日程:"+mCurYear+"年"+mCurMonth+"月"+((TextView)v).getText(), Toast.LENGTH_SHORT).show();
+				alterShowScheduleDetails(select_i,select_j);
 			}
 			
 		}
+	}
+	/**
+	 * list schedul by day
+	 * @param i
+	 * @param j
+	 */
+	private void alterShowScheduleDetails(int i, int j){
+		LayoutInflater aInflater = LayoutInflater.from(this);
+		ListView aListView = (ListView) aInflater.inflate(R.layout.list_view, null);
+		List<HashMap<String, Object>> aDatasList = new ArrayList<HashMap<String, Object>>();
+		if(aTextViewState[i][j]!=null && aTextViewState[i][j].mScheduleInfo.size()>0){
+			for(ScheduleInfo si:aTextViewState[i][j].mScheduleInfo){
+				HashMap<String,Object> map = new HashMap<String,Object>();
+				map.put("title_txt",si.mScheduleTitle);
+				map.put("start_time_txt",sdfMore.format(si.mFrom));
+				map.put("end_time_txt",sdfMore.format(si.mTo));
+				map.put("content_txt",si.mScheduleDetails);
+				aDatasList.add(map);
+			}	
+		}else{
+			Toast.makeText(this, mCurYear+"-"+mCurMonth+"-"+mToday+",无日程.", Toast.LENGTH_SHORT).show();
+			return;
+		}
+		SimpleAdapter aAdapter = new SimpleAdapter(this, aDatasList, R.layout.schedule_list_item,
+				new String[] { "title_txt","start_time_txt","end_time_txt","content_txt" }, 
+				new int[] { R.id.title_txt,R.id.start_time_txt,R.id.end_time_txt,R.id.content_txt });
+		aListView.setAdapter(aAdapter);
+		AlertDialog.Builder builder = new Builder(ScheduleActivity.this);
+		builder.setTitle("["+mCurYear+"-"+mCurMonth+"-"+mToday+"]日程");
+		builder.setView(aListView);
+		builder.setPositiveButton("关闭",new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				 
+			}
+		});
+		builder.create().show();
 	}
 	
 	class MonthClick implements OnClickListener{
@@ -458,6 +502,7 @@ public class ScheduleActivity extends MainActivity {
 						+ (c.get(Calendar.DATE) >= 10 ? c.get(Calendar.DATE)
 								: "0" + c.get(Calendar.DATE))+" "+"23:59:59");;
 				
+	  mScheduleInfoList.add(aSchedule);
 	  mScheduleInfoList.add(aSchedule);
 
 	}

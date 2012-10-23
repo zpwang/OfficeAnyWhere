@@ -74,7 +74,7 @@ public abstract class ListActivity extends MainActivity {
 	protected synchronized void setDataApater() {
 		mAdapter = null;
 		mAdapter = new SimpleAdapter(this, mDatasList, R.layout.list_item,
-				new String[] { "ItemText" }, new int[] { R.id.item_text });
+				new String[] {"ItemSrc", "ItemText" }, new int[] { R.id.item_image,R.id.item_text });
 		mListView.setAdapter(mAdapter);
 	}
 

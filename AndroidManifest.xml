@@ -39,7 +39,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
+        
+     <activity
             android:name=".offcial.LineChartActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait" >
@@ -64,11 +65,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-         
-        
-        
-         
           <activity
             android:name=".email.EmailActivity"
             android:label="@string/title_activity_main"

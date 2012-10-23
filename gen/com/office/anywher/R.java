@@ -30,29 +30,33 @@ public final class R {
     }
     public static final class drawable {
         public static final int bar_bg_image=0x7f020000;
-        public static final int bottom_button_bg_in=0x7f020001;
-        public static final int bottom_button_bg_out=0x7f020002;
-        public static final int click_in_bg=0x7f020003;
-        public static final int click_out_bg=0x7f020004;
-        public static final int click_style=0x7f020005;
-        public static final int expand=0x7f020006;
-        public static final int hidden=0x7f020007;
-        public static final int home_log=0x7f020008;
-        public static final int ic_action_search=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int left_nav_bg=0x7f02000b;
-        public static final int list_item_bg=0x7f02000c;
-        public static final int login_bg_image=0x7f02000d;
-        public static final int login_log=0x7f02000e;
-        public static final int menu=0x7f02000f;
-        public static final int n_gongwenchuli=0x7f020010;
-        public static final int n_huiyiguanli=0x7f020011;
-        public static final int n_richenganpai=0x7f020012;
-        public static final int n_tongxunlu=0x7f020013;
-        public static final int n_xinxifabu=0x7f020014;
-        public static final int n_youxiangguanli=0x7f020015;
-        public static final int n_ziliaoku=0x7f020016;
-        public static final int title_log=0x7f020017;
+        public static final int bar_chart_log=0x7f020001;
+        public static final int bottom_button_bg_in=0x7f020002;
+        public static final int bottom_button_bg_out=0x7f020003;
+        public static final int click_in_bg=0x7f020004;
+        public static final int click_out_bg=0x7f020005;
+        public static final int click_style=0x7f020006;
+        public static final int expand=0x7f020007;
+        public static final int hidden=0x7f020008;
+        public static final int home_log=0x7f020009;
+        public static final int ic_action_search=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int left_nav_bg=0x7f02000c;
+        public static final int line_chart_log=0x7f02000d;
+        public static final int list_item_bg=0x7f02000e;
+        public static final int list_title_image=0x7f02000f;
+        public static final int login_bg_image=0x7f020010;
+        public static final int login_log=0x7f020011;
+        public static final int menu=0x7f020012;
+        public static final int n_gongwenchuli=0x7f020013;
+        public static final int n_huiyiguanli=0x7f020014;
+        public static final int n_richenganpai=0x7f020015;
+        public static final int n_tongxunlu=0x7f020016;
+        public static final int n_xinxifabu=0x7f020017;
+        public static final int n_youxiangguanli=0x7f020018;
+        public static final int n_ziliaoku=0x7f020019;
+        public static final int pie_chart_log=0x7f02001a;
+        public static final int title_log=0x7f02001b;
     }
     public static final class id {
         public static final int after_month=0x7f0a0014;
@@ -68,8 +72,12 @@ public final class R {
         public static final int center_content=0x7f0a0006;
         public static final int center_scroll=0x7f0a0008;
         public static final int center_scroll_content=0x7f0a0009;
-        public static final int change_user=0x7f0a0090;
+        public static final int change_user=0x7f0a0099;
+        public static final int content=0x7f0a0097;
+        public static final int content_txt=0x7f0a0098;
         public static final int date_select=0x7f0a0012;
+        public static final int end_time=0x7f0a0095;
+        public static final int end_time_txt=0x7f0a0096;
         public static final int first=0x7f0a0017;
         public static final int first_month_1=0x7f0a0021;
         public static final int first_month_2=0x7f0a0022;
@@ -116,26 +124,27 @@ public final class R {
         public static final int four_title_6=0x7f0a005e;
         public static final int four_title_7=0x7f0a005f;
         public static final int grid_view_left_nv=0x7f0a0005;
-        public static final int gv_item_image=0x7f0a008e;
-        public static final int gv_item_text=0x7f0a008f;
+        public static final int gv_item_image=0x7f0a008f;
+        public static final int gv_item_text=0x7f0a0090;
         public static final int head_arrowImageView=0x7f0a0083;
         public static final int head_contentLayout=0x7f0a0082;
         public static final int head_lastUpdatedTextView=0x7f0a0086;
         public static final int head_progressBar=0x7f0a0084;
         public static final int head_rootLayout=0x7f0a0081;
         public static final int head_tipsTextView=0x7f0a0085;
-        public static final int item_text=0x7f0a0087;
-        public static final int list_view=0x7f0a0088;
+        public static final int item_image=0x7f0a0087;
+        public static final int item_text=0x7f0a0088;
+        public static final int list_view=0x7f0a0089;
         public static final int log_image=0x7f0a0001;
-        public static final int login_button=0x7f0a008c;
-        public static final int login_log=0x7f0a0089;
-        public static final int login_user_name=0x7f0a008a;
-        public static final int login_user_pwd=0x7f0a008b;
+        public static final int login_button=0x7f0a008d;
+        public static final int login_log=0x7f0a008a;
+        public static final int login_user_name=0x7f0a008b;
+        public static final int login_user_pwd=0x7f0a008c;
         public static final int main_top=0x7f0a0000;
         public static final int menu_button=0x7f0a000b;
         public static final int navigate_left=0x7f0a0004;
         public static final int progressBar1=0x7f0a0080;
-        public static final int remember_me=0x7f0a008d;
+        public static final int remember_me=0x7f0a008e;
         public static final int sec_title_1=0x7f0a0039;
         public static final int sec_title_2=0x7f0a003a;
         public static final int sec_title_3=0x7f0a003b;
@@ -171,6 +180,8 @@ public final class R {
         public static final int six_title_7=0x7f0a007f;
         public static final int split=0x7f0a001e;
         public static final int split_1=0x7f0a001f;
+        public static final int start_time=0x7f0a0093;
+        public static final int start_time_txt=0x7f0a0094;
         public static final int tableRow1=0x7f0a0016;
         public static final int tableRow2=0x7f0a0020;
         public static final int tableRow3=0x7f0a0030;
@@ -199,6 +210,8 @@ public final class R {
         public static final int third_title_5=0x7f0a004d;
         public static final int third_title_6=0x7f0a004e;
         public static final int third_title_7=0x7f0a004f;
+        public static final int title=0x7f0a0091;
+        public static final int title_txt=0x7f0a0092;
         public static final int welcome_text=0x7f0a0003;
     }
     public static final class layout {
@@ -211,6 +224,7 @@ public final class R {
         public static final int list_view=0x7f030006;
         public static final int login_activity=0x7f030007;
         public static final int nine_dial_gv_item=0x7f030008;
+        public static final int schedule_list_item=0x7f030009;
     }
     public static final class menu {
         public static final int activity_main=0x7f090000;

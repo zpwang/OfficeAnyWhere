@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF99"
+     >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:text="主题："
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/title"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/title"
+        android:text="今天你吃饭了吗？"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
+        android:text="开始时间："
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/start_time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/start_time"
+        android:layout_alignLeft="@+id/title_txt"
+        android:layout_marginLeft="20dp"
+        android:text="2012-10-23 23:52:01"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/start_time"
+        android:layout_marginTop="10dp"
+        android:text="结束时间："
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/end_time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/end_time"
+        android:layout_alignLeft="@+id/start_time_txt"
+        android:text="2012-10-23 23:52:01"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/end_time"
+        android:layout_marginTop="10dp"
+        android:text="内容："
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/content_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/content"
+        android:layout_marginTop="10dp"
+        android:text="今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？今天你吃饭了吗？"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

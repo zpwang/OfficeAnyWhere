@@ -3,14 +3,11 @@ package com.office.anywher.offcial;
 import java.util.HashMap;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.office.anywher.IConst;
@@ -119,9 +116,18 @@ public class ActionTankenActivity extends ListActivity {
 		if(aIsTongji){
 			for(int i=0;i<3;i++){
 				HashMap<String,Object> map = new HashMap<String,Object>();
-				if(i==0)map.put("ItemText","Line Chart");
-				if(i==1)map.put("ItemText","Pie Chart");
-				if(i==2)map.put("ItemText","Column Chart");
+				if(i==0){
+					map.put("ItemSrc",R.drawable.line_chart_log);
+					//map.put("ItemText","Line Chart");
+				}
+				if(i==1){
+					map.put("ItemSrc",R.drawable.pie_chart_log);
+					//map.put("ItemText","Pie Chart");
+				}
+				if(i==2){
+					map.put("ItemSrc",R.drawable.bar_chart_log);
+					//map.put("ItemText","Column Chart");
+				}
 				mDatasList.add(map);
 			}
 			mPullDatasSuc = true;
@@ -129,6 +135,7 @@ public class ActionTankenActivity extends ListActivity {
 		}
 		for(int i=0;i<9;i++){
 			HashMap<String,Object> map = new HashMap<String,Object>();
+		//	map.put("ItemSrc",R.drawable.list_title_image);
 			map.put("ItemText","dataType "+mDataType.getType()+" my test datas , the ActionTankenActivity "+i+" th");
 			mDatasList.add(map);
 		}
