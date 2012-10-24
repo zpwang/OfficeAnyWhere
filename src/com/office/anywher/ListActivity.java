@@ -49,18 +49,18 @@ public abstract class ListActivity extends MainActivity {
 		LayoutInflater aInflater = LayoutInflater.from(this);
 		mListView = (ListView) aInflater.inflate(R.layout.list_view, null);
 		aCenterContainer = (LinearLayout) findViewById(R.id.center_content);
-		aCenterContainer.removeAllViews();
-		mAdapter = new SimpleAdapter(this, mDatasList, R.layout.list_item,
-				new String[] { "ItemText" }, new int[] { R.id.item_text });
+		aCenterContainer.removeAllViews();	
 		LayoutParams lp = new LayoutParams(LayoutParams.MATCH_PARENT,
 				LayoutParams.MATCH_PARENT);
-		aCenterContainer.addView(mListView, lp);
-		mListView.setAdapter(mAdapter);
+		aCenterContainer.addView(mListView, lp);		
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
+		mAdapter = new SimpleAdapter(this, mDatasList, R.layout.list_item,
+				new String[] { "ItemText" }, new int[] { R.id.item_text });
+		mListView.setAdapter(mAdapter);
 	}
 
 	private void initBottomNaviget(){

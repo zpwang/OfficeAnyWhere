@@ -135,7 +135,7 @@ public class ActionTankenActivity extends ListActivity {
 		}
 		for(int i=0;i<9;i++){
 			HashMap<String,Object> map = new HashMap<String,Object>();
-		//	map.put("ItemSrc",R.drawable.list_title_image);
+			map.put("ItemSrc",R.drawable.list_title_log);
 			map.put("ItemText","dataType "+mDataType.getType()+" my test datas , the ActionTankenActivity "+i+" th");
 			mDatasList.add(map);
 		}

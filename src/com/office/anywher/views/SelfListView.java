@@ -69,40 +69,7 @@ public class SelfListView extends ListView implements OnScrollListener {
                 MeasureSpec.AT_MOST);
         super.onMeasure(widthMeasureSpec, expandSpec);
     }*/
-	private void init(Context context) {
-		inflater = LayoutInflater.from(context);
-		headView = (LinearLayout) inflater.inflate(R.layout.list_header, null);
-		arrowImageView = (ImageView) headView
-				.findViewById(R.id.head_arrowImageView);
-		arrowImageView.setMinimumWidth(50);
-		arrowImageView.setMinimumHeight(50);
-		progressBar = (ProgressBar) headView
-				.findViewById(R.id.head_progressBar);
-		tipsTextview = (TextView) headView.findViewById(R.id.head_tipsTextView);
-		lastUpdatedTextView = (TextView) headView
-				.findViewById(R.id.head_lastUpdatedTextView);
-		measureView(headView);
-		headContentHeight = headView.getMeasuredHeight();
-		headContentWidth = headView.getMeasuredWidth();
-		headView.setPadding(0, -1 * headContentHeight, 0, 0);
-		headView.invalidate();
-		Log.v("size", "width:" + headContentWidth + " height:"
-				+ headContentHeight);
-		addHeaderView(headView);
-		setOnScrollListener(this);
-		animation = new RotateAnimation(0, -180,
-				RotateAnimation.RELATIVE_TO_SELF, 0.5f,
-				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
-		animation.setInterpolator(new LinearInterpolator());
-		animation.setDuration(250);
-		animation.setFillAfter(true);
-		reverseAnimation = new RotateAnimation(-180, 0,
-				RotateAnimation.RELATIVE_TO_SELF, 0.5f,
-				RotateAnimation.RELATIVE_TO_SELF, 0.5f);
-		reverseAnimation.setInterpolator(new LinearInterpolator());
-		reverseAnimation.setDuration(250);
-		reverseAnimation.setFillAfter(true);
-	}
+	private void init(Context context) {}
 
 	public void onScroll(AbsListView arg0, int firstVisiableItem, int arg2,
 			int arg3) {

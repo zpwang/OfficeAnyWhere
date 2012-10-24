@@ -30,7 +30,7 @@
         android:layout_alignTop="@+id/gv_item_image"
         android:layout_toRightOf="@+id/gv_item_image"
         android:textColor="#FF0000"
-        android:text="10"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>
