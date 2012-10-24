@@ -4,25 +4,25 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/list_item_bg"
-     >
+    android:gravity="left" >
+
     <EditText
         android:id="@+id/search_key"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:ems="10" />
+        android:layout_toLeftOf="@+id/search_button"
+        android:ems="10" >
+
+    </EditText>
 
     <Button
         android:id="@+id/search_button"
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/search_key"
-        android:layout_alignBottom="@+id/search_key"
-        android:layout_toRightOf="@+id/search_key"
-        android:background="@drawable/find_click_style" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="查   询" />
 
 </RelativeLayout>

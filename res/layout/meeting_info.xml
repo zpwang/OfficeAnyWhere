@@ -24,7 +24,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:text=""
+                android:text="TEST"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
@@ -35,9 +35,9 @@
                 android:layout_below="@+id/pub_info_title"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="#FF0000"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:text="TEST"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FF0000" />
 
             <TextView
                 android:id="@+id/pub_info_state"
@@ -47,9 +47,9 @@
                 android:layout_alignBottom="@+id/pub_info_valid"
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/pub_info_valid"
-                android:textColor="#0000FF"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:text="TEST"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#0000FF" />
 
             <TextView
                 android:id="@+id/pub_info_content"
@@ -74,17 +74,6 @@
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
-                android:id="@+id/pub_info_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/pub_info_create_personer"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:text="time"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <TextView
                 android:id="@+id/pub_info_dep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -92,10 +81,20 @@
                 android:layout_alignBottom="@+id/pub_info_state"
                 android:layout_alignLeft="@+id/pub_info_content"
                 android:layout_marginLeft="10dp"
-                 android:textColor="#0000FF"
-                android:text=""
+                android:text="TEST"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#0000FF" />
+
+            <TextView
+                android:id="@+id/pub_info_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/pub_info_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/pub_info_create_personer"
+                android:text="time"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
-"
         </RelativeLayout>
     </ScrollView>
 
