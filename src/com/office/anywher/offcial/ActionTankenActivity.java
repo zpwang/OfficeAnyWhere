@@ -13,7 +13,10 @@ import android.widget.Toast;
 import com.office.anywher.IConst;
 import com.office.anywher.ListActivity;
 import com.office.anywher.R;
-import com.office.anywher.utils.ActivityStackUtil;
+import com.office.anywher.global.GlobalVar;
+import com.office.anywher.offcial.common.OfficailConst;
+import com.office.anywher.offcial.entity.GongWen;
+import com.office.anywher.offcial.service.GongWenDao;
 /**
  * 协同办公
  * @author Administrator
@@ -25,8 +28,6 @@ public class ActionTankenActivity extends ListActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityStackUtil.add(this);
-
         aBottomNav = IConst.NavigetText.XIETONGBANGGONG;
         mListView.setOnItemClickListener(new OnItemClickListener() {
 				@Override
@@ -66,23 +67,23 @@ public class ActionTankenActivity extends ListActivity {
 				switch(v.getId()){
 				case R.id.bottom_naviget_1:
 					setNavigetStyle(0,false);
-					mDataType.setType("DaiBan");
+					mDataType.setType(OfficailConst.DATA_TYPE_DB);
 					break;
 				case R.id.bottom_naviget_2:
 					setNavigetStyle(1,false);
-					mDataType.setType("DaiYue");
+					mDataType.setType(OfficailConst.DATA_TYPE_DY);
 					break;
 				case  R.id.bottom_naviget_3:
 					setNavigetStyle(2,false);
-					mDataType.setType("HuanBan");
+					mDataType.setType(OfficailConst.DATA_TYPE_HB);
 					break;
 				case  R.id.bottom_naviget_4:
 					setNavigetStyle(3,false);
-					mDataType.setType( "YiBan");
+					mDataType.setType(OfficailConst.DATA_TYPE_YB);
 					break;
 				case  R.id.bottom_naviget_5:
 					setNavigetStyle(4,false);
-					mDataType.setType("TongJi");
+					mDataType.setType(OfficailConst.DATA_TYPE_TJ);
 					aIsTongji = true;
 					break;
 				}
@@ -136,12 +137,33 @@ public class ActionTankenActivity extends ListActivity {
 			mPullDatasSuc = true;
 			return ;
 		}
-		for(int i=0;i<9;i++){
-			HashMap<String,Object> map = new HashMap<String,Object>();
+		HashMap<String,Object> headMap = new HashMap<String,Object>();
+		headMap.put("ItemSrc",R.drawable.list_title_log);
+		headMap.put("ItemText", "标题 | 流程 | 当前节点 | 上一节点");
+		mDatasList.add(headMap);
+		GongWenDao dao = new GongWenDao(this);
+		String userName = GlobalVar.getInstance().get(IConst.LOGIN_USER_NAME).toString();
+		String curStep = OfficailConst.STATE_DESC_YG;
+		if (mDataType.getType().equals(OfficailConst.DATA_TYPE_DB))
+			curStep = OfficailConst.STATE_DESC_DB;
+		else if (mDataType.getType().equals(OfficailConst.DATA_TYPE_DY))
+			curStep = OfficailConst.STATE_DESC_DY;
+		else if (mDataType.getType().equals(OfficailConst.DATA_TYPE_HB))
+			curStep = OfficailConst.STATE_DESC_HB;
+		else if (mDataType.getType().equals(OfficailConst.DATA_TYPE_YB))
+			curStep = OfficailConst.STATE_DESC_YB;
+		GongWen[] gongWens = dao.getGongWen(userName, curStep);
+		if (gongWens == null || gongWens.length == 0)
+			return ;
+		for (int i = 0; i < gongWens.length; i++) {
+			HashMap<String, Object> map = new HashMap<String, Object>();
 			map.put("ItemSrc",R.drawable.list_title_log);
-			map.put("ItemText","dataType "+mDataType.getType()+" my test datas , the ActionTankenActivity "+i+" th");
+			map.put("ItemText", gongWens[i].mOldTitle + " | "
+					+ gongWens[i].mProcessName + " | " + gongWens[i].mCurStep
+					+ " | " + gongWens[i].mUpstep);
 			mDatasList.add(map);
 		}
 		mPullDatasSuc = true;
+		dao.close();
 	}
 }
