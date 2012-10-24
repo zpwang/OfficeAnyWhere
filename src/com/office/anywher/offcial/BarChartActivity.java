@@ -7,6 +7,8 @@ import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 
+import com.office.anywher.utils.ActivityStackUtil;
+
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
@@ -18,7 +20,9 @@ public class BarChartActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        ActivityStackUtil.add(this);
+
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		setContentView(ChartFactory.getBarChartView(this, getBarDataset(), getBarRenderer(), Type.DEFAULT));
 	}

@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import com.office.anywher.ListActivity;
 import com.office.anywher.R;
 import com.office.anywher.adapters.DialAdapter;
+import com.office.anywher.utils.ActivityStackUtil;
 /**
  * 协同办公
  * @author Administrator
@@ -27,6 +28,8 @@ public class AddressActivity extends ListActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityStackUtil.add(this);
+
         LayoutInflater aInflater = LayoutInflater.from(this);
 		mHeader = (RelativeLayout) aInflater.inflate(R.layout.list_header, null);
 		mListView.addHeaderView(mHeader);

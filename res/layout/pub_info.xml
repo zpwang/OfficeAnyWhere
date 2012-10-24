@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <ScrollView
+        android:id="@+id/pub_info_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" >
+
+        <RelativeLayout
+            android:id="@+id/pub_info_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/pub_info_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/pub_info_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pub_info_title"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF0000"
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/pub_info_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/pub_info_valid"
+                android:layout_alignBottom="@+id/pub_info_valid"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/pub_info_valid"
+                android:textColor="#0000FF"
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/pub_info_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/pub_info_state"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/pub_info_create_personer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pub_info_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="createPersoner"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/pub_info_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pub_info_create_personer"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="time"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/pub_info_dep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/pub_info_state"
+                android:layout_alignBottom="@+id/pub_info_state"
+                android:layout_alignLeft="@+id/pub_info_content"
+                android:layout_marginLeft="10dp"
+                 android:textColor="#0000FF"
+                android:text="Small Text"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+"
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

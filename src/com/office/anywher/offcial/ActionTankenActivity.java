@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.office.anywher.IConst;
 import com.office.anywher.ListActivity;
 import com.office.anywher.R;
+import com.office.anywher.utils.ActivityStackUtil;
 /**
  * 协同办公
  * @author Administrator
@@ -24,6 +25,8 @@ public class ActionTankenActivity extends ListActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityStackUtil.add(this);
+
         aBottomNav = IConst.NavigetText.XIETONGBANGGONG;
         mListView.setOnItemClickListener(new OnItemClickListener() {
 				@Override

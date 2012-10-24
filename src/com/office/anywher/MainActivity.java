@@ -57,6 +57,7 @@ public class MainActivity extends Activity {
     private static AnimationSet aLeftNavShowActionset = new  AnimationSet(true);   
     private static AnimationSet aLeftNavHiddenActionset = new  AnimationSet(true);
     
+    
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

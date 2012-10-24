@@ -5,6 +5,8 @@ import org.achartengine.model.CategorySeries;
 import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 
+import com.office.anywher.utils.ActivityStackUtil;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
@@ -17,7 +19,9 @@ public class PieChartActivity extends Activity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        ActivityStackUtil.add(this);
+
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		setContentView(execute(this));
 	}

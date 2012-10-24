@@ -10,6 +10,8 @@ import org.achartengine.model.XYSeries;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
+import com.office.anywher.utils.ActivityStackUtil;
+
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Paint.Align;
@@ -21,7 +23,9 @@ public class LineChartActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        ActivityStackUtil.add(this);
+
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		String[] titles = new String[] { "Crete", "Corfu", "Thassos",
 				"Skiathos" };

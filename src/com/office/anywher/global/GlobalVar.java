@@ -56,7 +56,7 @@ public class GlobalVar {
 			aEmail.mEmailId = key;
 			aEmail.mEmailTitle = "我的收件箱测试数据"+i;
 			aEmail.mEmailContent = "\t我的收件箱测试数据,我的收件箱测试数据\n我的收件箱测试数据,我的收件箱测试数据.";
-			aEmail.mState = 1;
+			aEmail.mType = 1;
 			aEmail.mFrom = "A";
 			aEmail.mTo = "B;C;D";
 			key ++;
@@ -68,7 +68,7 @@ public class GlobalVar {
 			aEmail.mEmailId = key;
 			aEmail.mEmailTitle = "我的发件箱测试数据"+i;
 			aEmail.mEmailContent = "\t我的发件箱测试数据,我的发件箱测试数据\n我的发件箱测试数据,我的发件箱测试数据.";
-			aEmail.mState = 1;
+			aEmail.mType = 1;
 			aEmail.mFrom = "A";
 			aEmail.mTo = "B;C;D";
 			key ++;
@@ -80,7 +80,7 @@ public class GlobalVar {
 			aEmail.mEmailId = key;
 			aEmail.mEmailTitle = "我的草稿箱测试数据"+i;
 			aEmail.mEmailContent = "\t我的草稿箱测试数据,我的草稿箱测试数据\n我的草稿箱测试数据,我的草稿箱测试数据.";
-			aEmail.mState = 1;
+			aEmail.mType = 1;
 			aEmail.mFrom = "A";
 			aEmail.mTo = "B;C;D";
 			key ++;

@@ -32,6 +32,7 @@ import com.office.anywher.MainActivity;
 import com.office.anywher.R;
 import com.office.anywher.global.GlobalVar;
 import com.office.anywher.https.DataType;
+import com.office.anywher.utils.ActivityStackUtil;
 import com.office.anywher.utils.DefaultProgress;
 /**
  * 协同办公
@@ -62,6 +63,8 @@ public class ScheduleActivity extends MainActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityStackUtil.add(this);
+
         aCenterContainer = (LinearLayout) findViewById(R.id.center_content);
         aCenterContainer.removeAllViews();
     	LayoutInflater aInflater = LayoutInflater.from(this);

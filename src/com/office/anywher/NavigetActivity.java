@@ -24,6 +24,8 @@ public class NavigetActivity extends MainActivity{
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityStackUtil.add(this);
+
         aCenterLayout = (LinearLayout)findViewById(R.id.center_content);
         aCenterLayout.removeAllViews();
         aInflater=LayoutInflater.from(this);
