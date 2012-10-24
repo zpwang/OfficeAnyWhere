@@ -32,7 +32,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/title"
         android:layout_marginTop="10dp"
-        android:text="开始时间："
+        android:text="开始："
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -52,7 +52,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/start_time"
         android:layout_marginTop="10dp"
-        android:text="结束时间："
+        android:text="结束："
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
