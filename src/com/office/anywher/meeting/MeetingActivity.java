@@ -148,7 +148,7 @@ public class MeetingActivity extends ListActivity {
     			case  R.id.bottom_naviget_3:
     				setNavigetStyle(2,false);
     				mDataType.setType("HuiYi3");
-    				type =3;
+    				type =0;
     				break;
     			}
     			new Thread(mPullDatasThread).start();

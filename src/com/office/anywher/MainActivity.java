@@ -164,21 +164,25 @@ public class MainActivity extends Activity {
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_huiyiguanli);
 		map.put(aGridViewItemText,"");
+		map.put(aGridViewItemNumber,"20");
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_xinxifabu);
 		map.put(aGridViewItemText,"");
+		map.put(aGridViewItemNumber,"9");
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_ziliaoku);
 		map.put(aGridViewItemText,"");
+		map.put(aGridViewItemNumber,"20");
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_tongxunlu);
 		map.put(aGridViewItemText,"");
+		map.put(aGridViewItemNumber,"12");
 		aMenuDatas.add(map);
 		
 	}

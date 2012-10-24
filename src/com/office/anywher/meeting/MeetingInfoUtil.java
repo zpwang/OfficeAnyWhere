@@ -10,8 +10,8 @@ public class MeetingInfoUtil {
 	public MeetingInfoUtil(){
 		for(int i=0;i<20;i++){
 			MeetingInfo mi = new MeetingInfo();
-			mi.mTitle = "测试会议管理数据"+i;
-			mi.mContent = "测试会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据";
+			mi.mTitle = "测试最新会议管理数据"+i;
+			mi.mContent = "测试最新会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据";
 			mi.mFrom = new Date();
 			mi.mTo = new Date();
 			mi.mRoom = "会议室"+i;
@@ -26,8 +26,8 @@ public class MeetingInfoUtil {
 		}
 		for(int i=0;i<16;i++){
 			MeetingInfo mi = new MeetingInfo();
-			mi.mTitle = "测试会议管理数据"+i;
-			mi.mContent = "测试会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据";
+			mi.mTitle = "测试历史会议管理数据"+i;
+			mi.mContent = "测试历史会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据,测试会议管理数据";
 			mi.mFrom = new Date();
 			mi.mTo = new Date();
 			mi.mDep = "Dep"+i;
