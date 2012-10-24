@@ -272,6 +272,7 @@ public final class R {
         public static final int nine_dial_gv_item=0x7f03000b;
         public static final int pub_info=0x7f03000c;
         public static final int schedule_list_item=0x7f03000d;
+        public static final int welcome_activity=0x7f03000e;
     }
     public static final class menu {
         public static final int activity_main=0x7f090000;

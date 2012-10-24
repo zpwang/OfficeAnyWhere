@@ -1,10 +1,5 @@
 package com.office.anywher;
 
-import java.io.IOException;
-
-import org.apache.http.client.ClientProtocolException;
-import org.json.JSONException;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -14,8 +9,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.os.StrictMode;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,8 +21,6 @@ import android.widget.Toast;
 import com.office.anywher.db.Login;
 import com.office.anywher.db.LoginDao;
 import com.office.anywher.global.GlobalVar;
-import com.office.anywher.https.HttpClient;
-import com.office.anywher.https.JsonBean;
 import com.office.anywher.utils.ActivityStackUtil;
 import com.office.anywher.utils.DefaultProgress;
 
