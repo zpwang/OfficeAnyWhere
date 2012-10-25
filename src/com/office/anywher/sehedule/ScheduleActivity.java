@@ -47,7 +47,6 @@ public class ScheduleActivity extends MainActivity {
 	private TextView aTitleItem[][] = new TextView [6][7];
 	private TextViewState aTextViewState[][] = new TextViewState [6][7];
 	private static int[][] aCalendar = new int[6][7];
-	private static int[][] aHashSchedul = new int[6][7];
 	private static int[] monthDay = new int[]{31,28,31,30,31,30,31,31,30,31,30,31};
 	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	private SimpleDateFormat sdfMore = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
