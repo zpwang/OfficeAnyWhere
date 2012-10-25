@@ -61,35 +61,12 @@ public class EmailActivity extends ListActivity {
         setNavigetStyle(0,true);
 
 	}
-	/*private void setNavigetStyle(int index,boolean init){
-		for(int i=0;i<aNavs.length;i++){
-			aNavs[i].setVisibility(View.VISIBLE);
-			aNavs[i].setText(IConst.NavigetText.EMAIL[i]);
-			if(init){
-				aNavs[i].setOnClickListener(clickListener);
-			}
-			if(i!=index){
-				aNavs[i].setBackgroundResource(R.drawable.bottom_button_bg_out);
-
-				aNavs[i].setTextColor(Color.parseColor(IConst.NavigetText.CLICKTEXTCOLOR[0]));
-				aNavs[i].setTextSize(IConst.NavigetText.CLICKTEXTSIZE[0]);
-			}else{
-				aNavs[i].setBackgroundResource(R.drawable.bottom_button_bg_in);
-				aNavs[i].setTextColor(Color.parseColor(IConst.NavigetText.CLICKTEXTCOLOR[1]));
-				aNavs[i].setTextSize(IConst.NavigetText.CLICKTEXTSIZE[1]);
-			}
-		}
-		if(init){
-			new Thread(mPullDatasThread).start();
-			mDefaultProgress.show();
-		}
-	}*/
-	
 	
 	protected void getDatas(){
 		mDatasList.clear();
 		for(int i=0;i<18;i++){
 			HashMap<String,Object> map = new HashMap<String,Object>();
+			map.put("ItemSrc",R.drawable.list_title_log);
 			map.put("ItemText","dataType "+mDataType.getType()+" my test datas , the ActionTankenActivity "+i+" th");
 			mDatasList.add(map);
 		}
