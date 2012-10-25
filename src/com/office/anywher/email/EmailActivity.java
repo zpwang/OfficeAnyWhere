@@ -19,14 +19,14 @@ import com.office.anywher.utils.ActivityStackUtil;
  *
  */
 public class EmailActivity extends ListActivity {
-	private static final String tag = "ActionTankenActivity";
+	private static final String tag = "EmailActivity";
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityStackUtil.add(this);
-
         aBottomNav = IConst.NavigetText.EMAIL;
+        
         mListView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> paramAdapterView,
@@ -35,6 +35,7 @@ public class EmailActivity extends ListActivity {
 						.show();
 			}
 		});
+        
         clickListener = new OnClickListener(){
     		@Override
     		public void onClick(View v) {
