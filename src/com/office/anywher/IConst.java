@@ -2,7 +2,7 @@ package com.office.anywher;
 
 public interface IConst {
 
-	public static final String USER_CHANGE = "USER_CHANGE";
+	public static final String USER_CHANGE = "USER_CHANGE"; 
 	public static final String LOGIN_USER_NAME = "LOGIN_USER_NAME";
 	public static final String WELL_COME = "ºÍ³ÏÒÆ¶¯OA»¶Ó­Äú";
 	public static final String EMAIL_DEMO_DATA = "EMAIL_DEMO_DATA";
