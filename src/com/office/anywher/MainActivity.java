@@ -153,7 +153,7 @@ public class MainActivity extends Activity {
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_youxiangguanli);
 		map.put(aGridViewItemText,"");
-		map.put(aGridViewItemNumber,EmailUtil.getEmailNumber(1));
+		map.put(aGridViewItemNumber,EmailUtil.getEmailNumber(""+GlobalVar.getInstance().get(IConst.LOGIN_USER_NAME),1));
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();
