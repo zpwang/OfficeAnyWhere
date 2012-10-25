@@ -57,8 +57,9 @@ public class GlobalVar {
 			aEmail.mEmailTitle = "我的收件箱测试数据"+i;
 			aEmail.mEmailContent = "\t我的收件箱测试数据,我的收件箱测试数据\n我的收件箱测试数据,我的收件箱测试数据.";
 			aEmail.mType = 1;
-			aEmail.mFrom = "A";
-			aEmail.mTo = "B;C;D";
+			aEmail.mState =1;
+			aEmail.mFrom = "B";
+			aEmail.mTo = "A";
 			key ++;
 			aEmails.add(aEmail);
 		}
@@ -68,9 +69,10 @@ public class GlobalVar {
 			aEmail.mEmailId = key;
 			aEmail.mEmailTitle = "我的发件箱测试数据"+i;
 			aEmail.mEmailContent = "\t我的发件箱测试数据,我的发件箱测试数据\n我的发件箱测试数据,我的发件箱测试数据.";
-			aEmail.mType = 1;
-			aEmail.mFrom = "A";
-			aEmail.mTo = "B;C;D";
+			aEmail.mType = 2;
+			aEmail.mState =4;
+			aEmail.mFrom = "B";
+			aEmail.mTo = "A";
 			key ++;
 			aEmails.add(aEmail);
 		}
@@ -80,13 +82,16 @@ public class GlobalVar {
 			aEmail.mEmailId = key;
 			aEmail.mEmailTitle = "我的草稿箱测试数据"+i;
 			aEmail.mEmailContent = "\t我的草稿箱测试数据,我的草稿箱测试数据\n我的草稿箱测试数据,我的草稿箱测试数据.";
-			aEmail.mType = 1;
-			aEmail.mFrom = "A";
-			aEmail.mTo = "B;C;D";
+			aEmail.mType  = 3;
+			aEmail.mState = 5;
+			aEmail.mFrom = "B";
+			aEmail.mTo = "A";
 			key ++;
 			aEmails.add(aEmail);
 		}
-		mVar.put(IConst.EMAIL_DEMO_DATA,aEmails);
+		Map<String,List<EmailInfo>> userEmailsMap= new HashMap<String,List<EmailInfo>>();
+		userEmailsMap.put("A", aEmails);
+		mVar.put(IConst.EMAIL_DEMO_DATA,userEmailsMap);
 	}
 	
 	private void initSchedule() throws ParseException{
