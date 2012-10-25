@@ -48,9 +48,10 @@
         android:id="@+id/more_condition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/pub_title_label"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/more_search"
-        android:background="#FFFFCC"
+        android:padding="5dp"
+       android:background="#FFFFE5"
         android:visibility="gone"
          >
 
