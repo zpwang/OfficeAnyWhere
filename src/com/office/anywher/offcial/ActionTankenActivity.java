@@ -92,27 +92,6 @@ public class ActionTankenActivity extends ListActivity {
 		};
         setNavigetStyle(0,true);
 	}
-	/*private void setNavigetStyle(int index,boolean init){
-		for(int i=0;i<aNavs.length;i++){
-			aNavs[i].setVisibility(View.VISIBLE);
-			aNavs[i].setText(IConst.NavigetText.XIETONGBANGGONG[i]);
-			if(init)aNavs[i].setOnClickListener(clickListener);
-			if(i!=index){
-				aNavs[i].setBackgroundResource(R.drawable.bottom_button_bg_out);
-				aNavs[i].setTextColor(Color.parseColor(IConst.NavigetText.CLICKTEXTCOLOR[0]));
-				aNavs[i].setTextSize(IConst.NavigetText.CLICKTEXTSIZE[0]);
-			}else{
-				aNavs[i].setBackgroundResource(R.drawable.bottom_button_bg_in);
-				aNavs[i].setTextColor(Color.parseColor(IConst.NavigetText.CLICKTEXTCOLOR[1]));
-				aNavs[i].setTextSize(IConst.NavigetText.CLICKTEXTSIZE[1]);
-			}
-		}
-		if(init){
-			new Thread(mPullDatasThread).start();
-			mDefaultProgress.show();
-		}
-	}*/
-	
 	
 	@Override
 	protected synchronized void getDatas() {
@@ -122,15 +101,15 @@ public class ActionTankenActivity extends ListActivity {
 				HashMap<String,Object> map = new HashMap<String,Object>();
 				if(i==0){
 					map.put("ItemSrc",R.drawable.line_chart_log);
-					//map.put("ItemText","Line Chart");
+					map.put("ItemText","");
 				}
 				if(i==1){
 					map.put("ItemSrc",R.drawable.pie_chart_log);
-					//map.put("ItemText","Pie Chart");
+					map.put("ItemText","");
 				}
 				if(i==2){
 					map.put("ItemSrc",R.drawable.bar_chart_log);
-					//map.put("ItemText","Column Chart");
+					map.put("ItemText","");
 				}
 				mDatasList.add(map);
 			}
