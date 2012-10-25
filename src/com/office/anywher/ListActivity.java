@@ -36,7 +36,6 @@ public abstract class ListActivity extends MainActivity {
 	protected DefaultProgress mDefaultProgress;
 	protected PullDatasThread mPullDatasThread;
 	protected View mCurClickView;
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

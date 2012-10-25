@@ -39,7 +39,7 @@ import com.office.anywher.utils.ActivityStackUtil;
  *
  */
 public class MeetingActivity extends ListActivity {
-	private static final String tag = "InfoPubActivity";
+	private static final String tag = "MeetingActivity";
 	private RelativeLayout mHeader;
 	private Button mSearch;
 	private Button mMoreSearch;

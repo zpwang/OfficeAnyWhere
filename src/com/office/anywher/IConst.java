@@ -7,7 +7,7 @@ public interface IConst {
 	public static final String WELL_COME = "和诚移动OA欢迎您";
 	public static final String EMAIL_DEMO_DATA = "EMAIL_DEMO_DATA";
 	public static final String SCHEDUL_DEMO_DATA = "SCHEDUL_DEMO_DATA";
-
+	public static final String NULL_ERROR_INFO = "不能为空.";
 	public interface NavigetText{
 		public static final String[] CLICKTEXTCOLOR = new String[]{"#331A00","#FFFFFF"};
 		public static final int[] CLICKTEXTSIZE = new int[]{15,15};

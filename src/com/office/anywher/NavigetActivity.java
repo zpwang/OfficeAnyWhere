@@ -36,8 +36,6 @@ public class NavigetActivity extends MainActivity{
 	@Override
 	public void onResume(){
 		super.onResume();
-		((List)GlobalVar.getInstance().get(IConst.EMAIL_DEMO_DATA)).remove(0);
-		Log.d(tag, "size:"+((List)GlobalVar.getInstance().get(IConst.EMAIL_DEMO_DATA)).size());
 		initMenuDatas();
 		adapter = new SimpleAdapter(this, aMenuDatas,
 				R.layout.nine_dial_gv_item, new String[] {aGridViewItemImage,

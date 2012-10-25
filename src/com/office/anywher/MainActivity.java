@@ -121,6 +121,10 @@ public class MainActivity extends Activity {
 			}
         });
     }
+	@Override
+	public void onResume(){
+		super.onResume();
+	}
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
@@ -153,7 +157,7 @@ public class MainActivity extends Activity {
 		map = new HashMap<String,Object>();
 		map.put(aGridViewItemImage, R.drawable.n_youxiangguanli);
 		map.put(aGridViewItemText,"");
-		map.put(aGridViewItemNumber,EmailUtil.getEmailNumber(""+GlobalVar.getInstance().get(IConst.LOGIN_USER_NAME),1));
+		map.put(aGridViewItemNumber,EmailUtil.getEmailNumber(""+GlobalVar.getInstance().get(IConst.LOGIN_USER_NAME),2));
 		aMenuDatas.add(map);
 		
 		map = new HashMap<String,Object>();

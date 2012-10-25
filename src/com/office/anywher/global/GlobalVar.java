@@ -22,16 +22,20 @@ import com.office.anywher.sehedule.ScheduleInfo;
 public class GlobalVar {
 	private static Map<String, Object> mVar = new HashMap<String, Object>();
 	private static GlobalVar mGlobalVar = new GlobalVar();
-
+	private static int id = 0;
 	private GlobalVar() {
 		initEmailDatas();
 		try {
 			initSchedule();
+			initEmailDatas();
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 	}
 
+	public synchronized static int getId(){
+		return id++;
+	}
 	public synchronized static GlobalVar getInstance() {
 		return mGlobalVar;
 	}
@@ -49,48 +53,85 @@ public class GlobalVar {
 
 	private static void initEmailDatas() {
 		List<EmailInfo> aEmails = new ArrayList<EmailInfo>();
-		int key = 1;
 		for (int i = 0; i < 10; i++) {
 			EmailInfo aEmail = new EmailInfo();
 			aEmail.mDoneDate = new Date();
-			aEmail.mEmailId = key;
-			aEmail.mEmailTitle = "我的收件箱测试数据"+i;
-			aEmail.mEmailContent = "\t我的收件箱测试数据,我的收件箱测试数据\n我的收件箱测试数据,我的收件箱测试数据.";
+			aEmail.mEmailTitle = "A我的收件箱测试数据"+i;
+			aEmail.mEmailContent = "\tA我的收件箱测试数据,我的收件箱测试数据\n我的收件箱测试数据,我的收件箱测试数据.";
 			aEmail.mType = 1;
-			aEmail.mState =1;
-			aEmail.mFrom = "B";
-			aEmail.mTo = "A";
-			key ++;
+			aEmail.mState =2;
+			aEmail.mFrom = "2";
+			aEmail.mTo = "1";
+			aEmail.mEmailId = getId();
 			aEmails.add(aEmail);
 		}
 		for (int i = 0; i < 6; i++) {
 			EmailInfo aEmail = new EmailInfo();
 			aEmail.mDoneDate = new Date();
-			aEmail.mEmailId = key;
-			aEmail.mEmailTitle = "我的发件箱测试数据"+i;
-			aEmail.mEmailContent = "\t我的发件箱测试数据,我的发件箱测试数据\n我的发件箱测试数据,我的发件箱测试数据.";
+			aEmail.mEmailId = getId();
+			aEmail.mEmailTitle = "A我的发件箱测试数据"+i;
+			aEmail.mEmailContent = "\tA我的发件箱测试数据,我的发件箱测试数据\n我的发件箱测试数据,我的发件箱测试数据.";
 			aEmail.mType = 2;
 			aEmail.mState =4;
-			aEmail.mFrom = "B";
-			aEmail.mTo = "A";
-			key ++;
+			aEmail.mFrom = "2";
+			aEmail.mTo = "1";
 			aEmails.add(aEmail);
 		}
 		for (int i = 0; i < 8; i++) {
 			EmailInfo aEmail = new EmailInfo();
 			aEmail.mDoneDate = new Date();
-			aEmail.mEmailId = key;
-			aEmail.mEmailTitle = "我的草稿箱测试数据"+i;
-			aEmail.mEmailContent = "\t我的草稿箱测试数据,我的草稿箱测试数据\n我的草稿箱测试数据,我的草稿箱测试数据.";
+			aEmail.mEmailId = getId();
+			aEmail.mEmailTitle = "A我的草稿箱测试数据"+i;
+			aEmail.mEmailContent = "\tA我的草稿箱测试数据,我的草稿箱测试数据\n我的草稿箱测试数据,我的草稿箱测试数据.";
 			aEmail.mType  = 3;
 			aEmail.mState = 5;
-			aEmail.mFrom = "B";
-			aEmail.mTo = "A";
-			key ++;
+			aEmail.mFrom = "2";
+			aEmail.mTo = "1";
 			aEmails.add(aEmail);
 		}
 		Map<String,List<EmailInfo>> userEmailsMap= new HashMap<String,List<EmailInfo>>();
-		userEmailsMap.put("A", aEmails);
+		userEmailsMap.put("1", aEmails);
+		mVar.put(IConst.EMAIL_DEMO_DATA,userEmailsMap);
+		
+		
+		aEmails = new ArrayList<EmailInfo>();
+		for (int i = 0; i < 10; i++) {
+			EmailInfo aEmail = new EmailInfo();
+			aEmail.mDoneDate = new Date();
+			aEmail.mEmailTitle = "B我的收件箱测试数据"+i;
+			aEmail.mEmailContent = "\tB我的收件箱测试数据,我的收件箱测试数据\n我的收件箱测试数据,我的收件箱测试数据.";
+			aEmail.mType = 1;
+			aEmail.mState =2;
+			aEmail.mFrom = "1";
+			aEmail.mTo = "2";
+			aEmail.mEmailId = getId();
+			aEmails.add(aEmail);
+		}
+		for (int i = 0; i < 6; i++) {
+			EmailInfo aEmail = new EmailInfo();
+			aEmail.mDoneDate = new Date();
+			aEmail.mEmailTitle = "B我的发件箱测试数据"+i;
+			aEmail.mEmailContent = "\tB我的发件箱测试数据,我的发件箱测试数据\n我的发件箱测试数据,我的发件箱测试数据.";
+			aEmail.mType = 2;
+			aEmail.mState =4;
+			aEmail.mFrom = "1";
+			aEmail.mTo = "2";
+			aEmail.mEmailId = getId();
+			aEmails.add(aEmail);
+		}
+		for (int i = 0; i < 8; i++) {
+			EmailInfo aEmail = new EmailInfo();
+			aEmail.mDoneDate = new Date();
+			aEmail.mEmailTitle = "B我的草稿箱测试数据"+i;
+			aEmail.mEmailContent = "\tB我的草稿箱测试数据,我的草稿箱测试数据\n我的草稿箱测试数据,我的草稿箱测试数据.";
+			aEmail.mType  = 3;
+			aEmail.mState = 5;
+			aEmail.mFrom = "1";
+			aEmail.mTo = "2";
+			aEmail.mEmailId = getId();
+			aEmails.add(aEmail);
+		}
+		userEmailsMap.put("2", aEmails);
 		mVar.put(IConst.EMAIL_DEMO_DATA,userEmailsMap);
 	}
 	

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/email_key_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:ems="10" >
+    </EditText>
+
+    <Button
+        android:id="@+id/search_email_btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/email_key_txt"
+        android:layout_alignBottom="@+id/email_key_txt"
+        android:layout_toRightOf="@+id/email_key_txt"
+        android:text="查询" />
+
+    <Button
+        android:id="@+id/new_email_bt"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/search_email_btn"
+        android:layout_alignBottom="@+id/search_email_btn"
+        android:layout_toRightOf="@+id/search_email_btn"
+        android:text="新建" />
+
+</RelativeLayout>
